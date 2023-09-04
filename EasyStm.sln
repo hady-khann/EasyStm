@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyStm", "Easy.StimulReports.Tools.Pdf\EasyStm.csproj", "{764DA4E6-DEC5-4BF4-9490-4693E416E989}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyStm", "EasyStm\EasyStm.csproj", "{230FE30C-CF65-4E72-B47C-21A41D486001}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{764DA4E6-DEC5-4BF4-9490-4693E416E989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{764DA4E6-DEC5-4BF4-9490-4693E416E989}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{764DA4E6-DEC5-4BF4-9490-4693E416E989}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{764DA4E6-DEC5-4BF4-9490-4693E416E989}.Release|Any CPU.Build.0 = Release|Any CPU
+		{230FE30C-CF65-4E72-B47C-21A41D486001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{230FE30C-CF65-4E72-B47C-21A41D486001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{230FE30C-CF65-4E72-B47C-21A41D486001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{230FE30C-CF65-4E72-B47C-21A41D486001}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
