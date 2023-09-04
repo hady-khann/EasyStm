@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using EasyStm.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Stimulsoft.Base;
 using Stimulsoft.Report;
 using Stimulsoft.Report.Export;
 
-namespace Easy.StimulReports.Tools.Pdf;
+namespace EasyStm.Reports.Pdf;
 
 public class StmReports
 {
@@ -19,7 +20,7 @@ public class StmReports
         StiLicense.LoadFromString(_configuration["Stimulsoft:License"]);
     }
 
-    public async Task<ReportResult> PrintPDFAsync<T>(ReportObject<T> Object , ReportInfo<T> info)
+    public async Task<ReportResult> PrintPDFAsync<T>(ReportObject<T> Object , ReportInfo info)
     {
         StiReport stiReport = new StiReport();
         string projectRootPath = $"{_webHostEnvironment.WebRootPath}/reports/{info.ReportFileName}.mrt";
@@ -54,7 +55,7 @@ public class StmReports
         };
     }
 
-    public async Task<ReportResult> PrintPDFAsync<T>(List<ReportObject<T>> Object, ReportInfo<T> info)
+    public async Task<ReportResult> PrintPDFAsync<T>(List<ReportObject<T>> Object, ReportInfo info)
     {
         StiReport stiReport = new StiReport();
         string projectRootPath = $"{_webHostEnvironment.WebRootPath}/reports/{info.ReportFileName}.mrt";

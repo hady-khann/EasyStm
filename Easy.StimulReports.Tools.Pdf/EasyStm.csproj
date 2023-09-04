@@ -7,11 +7,11 @@
 	  <PackageOutputPath>../nuget</PackageOutputPath>
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	  <Version>2023.1.1</Version>
-	  <PackageId>Easy.StimulReports.Tools.Pdf</PackageId>
 	  <Title>Stimul Soft Report Easy PDF Tool </Title>
-	  <Product>Easy.StimulReports.Tools.Pdf</Product>
+	  <PackageId>EasyStm</PackageId>
+	  <Product>EasyStm</Product>
 	  <Authors>HK</Authors>
-	  <Company>HK</Company>
+	  <Company>EasyTools</Company>
   </PropertyGroup>
 
 	<ItemGroup>

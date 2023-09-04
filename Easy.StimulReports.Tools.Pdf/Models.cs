@@ -1,6 +1,6 @@
-﻿namespace Easy.StimulReports.Tools.Pdf;
+﻿namespace EasyStm.Models;
 
-public class ReportInfo<T>
+public class ReportInfo
 {
     public string ReportFileName { get; set; }
     public string PdfFileName { get; set; }
