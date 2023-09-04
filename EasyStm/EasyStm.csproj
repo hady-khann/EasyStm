@@ -12,11 +12,22 @@
 	  <Product>EasyStm</Product>
 	  <Authors>HK</Authors>
 	  <Company>EasyTools</Company>
+	  <PackageProjectUrl></PackageProjectUrl>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+	  <RepositoryUrl>https://github.com/hady-khann/EasyStm</RepositoryUrl>
+	  <PackageTags>stimulsoft</PackageTags>
   </PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Stimulsoft.Reports.Web.NetCore" Version="2023.1.1" />
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	</ItemGroup>
 	
 </Project>
