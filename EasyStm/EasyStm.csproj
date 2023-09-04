@@ -18,6 +18,7 @@
 	  <PackageTags>stimulsoft</PackageTags>
 	  <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 	  <PackageLicenseFile>LICENSE</PackageLicenseFile>
+	  <Description>Stimul Soft Report Easy PDF Tool</Description>
   </PropertyGroup>
 
 	<ItemGroup>
