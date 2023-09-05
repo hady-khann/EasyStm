@@ -10,10 +10,15 @@ First Of All Add Below Config In AppSetting :
 Then :
 
 Add wwwroot Folder In Api
+
 wwwroot Contains Two Folder
+
 fonts,reports 
+
 Add Your StimulReport Files In reports
+
 Add your fonts in fonts folder
+
 
 Usage Example: 
 
