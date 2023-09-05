@@ -7,7 +7,7 @@ using Stimulsoft.Report.Export;
 
 namespace EasyStm.Reports.Pdf;
 
-public class StmReports
+public class StmReports : IStmReports
 {
     private readonly IWebHostEnvironment _webHostEnvironment;
 
@@ -20,7 +20,7 @@ public class StmReports
         StiLicense.LoadFromString(_configuration["Stimulsoft:License"]);
     }
 
-    public async Task<ReportResult> PrintPDFAsync<T>(ReportObject<T> Object , ReportInfo info)
+    public async Task<ReportResult> PrintPDFAsync<T>(ReportObject<T> Object, ReportInfo info)
     {
         StiReport stiReport = new StiReport();
         string projectRootPath = $"{_webHostEnvironment.WebRootPath}/reports/{info.ReportFileName}.mrt";
