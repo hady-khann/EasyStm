@@ -27,7 +27,7 @@ public class StmReports : IStmReports
 
         stiReport.Load(projectRootPath);
         stiReport.RegBusinessObject(Object.BusinessObjectName, Object.ObjectData);
-        await stiReport.RenderAsync();
+        stiReport.Render();
 
         MemoryStream memoryStream = new MemoryStream();
         StiFontCollection.AddFontFile($"{_webHostEnvironment.WebRootPath}/fonts/{info.FontName}.{info.FontExtension}");
@@ -66,7 +66,7 @@ public class StmReports : IStmReports
             stiReport.RegBusinessObject(x.BusinessObjectName, x.ObjectData);
         });
 
-        await stiReport.RenderAsync();
+        stiReport.Render();
 
         MemoryStream memoryStream = new MemoryStream();
 
