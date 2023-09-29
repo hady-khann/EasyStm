@@ -27,13 +27,18 @@ public class StmReports : IStmReports
 
         stiReport.Load(projectRootPath);
         stiReport.RegBusinessObject(Object.BusinessObjectName, Object.ObjectData);
-        stiReport.Render();
+        await stiReport.RenderAsync();
 
         MemoryStream memoryStream = new MemoryStream();
-        StiFontCollection.AddFontFile($"{_webHostEnvironment.WebRootPath}/fonts/{info.FontName}.{info.FontExtension}");
+
+        info.Fonts.ForEach(x =>
+        {
+            StiFontCollection.AddFontFile($"{_webHostEnvironment.WebRootPath}/fonts/{x.FontName}.{x.FontExtension}");
+        });
+
         stiReport.LoadFonts();
 
-        StiOptions.Export.Pdf.AllowImportSystemLibraries = true;
+        StiOptions.Export.Pdf.AllowInvokeWindowsLibraries = true;
         stiReport.ExportDocument(StiExportFormat.Pdf, memoryStream, new StiPdfExportSettings()
         {
             Compressed = true,
@@ -66,22 +71,28 @@ public class StmReports : IStmReports
             stiReport.RegBusinessObject(x.BusinessObjectName, x.ObjectData);
         });
 
-        stiReport.Render();
+        info.Fonts.ForEach(x =>
+        {
+            string fontPath = $"{_webHostEnvironment.WebRootPath}/fonts/{x.FontName}.{x.FontExtension}";
 
-        MemoryStream memoryStream = new MemoryStream();
-
-        StiFontCollection.AddFontFile($"{_webHostEnvironment.WebRootPath}/fonts/{info.FontName}.{info.FontExtension}");
+            if (File.Exists(fontPath))
+                StiFontCollection.AddFontFile(fontPath);
+        });
 
         stiReport.LoadFonts();
 
-        StiOptions.Export.Pdf.AllowImportSystemLibraries = true;
+        await stiReport.RenderAsync();
+
+        MemoryStream memoryStream = new MemoryStream();
+
+        StiOptions.Export.Pdf.AllowInvokeWindowsLibraries = true;
         stiReport.ExportDocument(StiExportFormat.Pdf, memoryStream, new StiPdfExportSettings()
         {
             Compressed = true,
             AllowEditable = StiPdfAllowEditable.No,
             ImageQuality = 1,
             EmbeddedFonts = true,
-            StandardPdfFonts = true,
+            StandardPdfFonts = false,
             ImageCompressionMethod = StiPdfImageCompressionMethod.Jpeg
         });
 
