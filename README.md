@@ -48,10 +48,15 @@ Usage Example:
                         BusinessObjectName = "PersonDetails",
                         ObjectData = new { name = "name 1234" }
                     };
+
+                    var FontsList = new List<ReportFont>() {
+                        new ReportFont{ FontName = "FontName1"},
+                        new ReportFont{ FontName = "FontName2"},
+                    };
             
                     var info = new ReportInfo()
                     {
-                        FontName = "Your FontName",
+                        FontName = FontsList,
                         FontExtension = "ttf", // Defualt Is "ttf"
                         ReportFileName = "Stimul Report File Name.mrt",
                         PdfFileName = "pdf Result FileName",
@@ -72,9 +77,14 @@ Usage Example:
                                 new ReportObject<object>{ BusinessObjectName = "CompanyDetails" , ObjectData = new{ companyname = "companyname 31598772"} }
                             };
             
+                    var FontsList = new List<ReportFont>() {
+                        new ReportFont{ FontName = "FontName1"},
+                        new ReportFont{ FontName = "FontName2"},
+                    };
+            
                     var info = new ReportInfo()
                     {
-                        FontName = "Your FontName",
+                        FontName = FontsList,
                         FontExtension = "ttf", // Defualt Is "ttf"
                         ReportFileName = "Stimul Report File Name.mrt",
                         PdfFileName = "pdf Result FileName",
