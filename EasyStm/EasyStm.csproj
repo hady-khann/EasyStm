@@ -37,7 +37,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Stimulsoft.Reports.Web.NetCore" Version="2023.1.1" />
+	  <PackageReference Include="Stimulsoft.Reports.Web.NetCore" Version="2023.3.4" />
 	</ItemGroup>
 	
 </Project>
