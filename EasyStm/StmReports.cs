@@ -13,7 +13,7 @@ public class StmReports : IStmReports
 
     private readonly IConfiguration _configuration;
 
-    public StmReports(IWebHostEnvironment webHostEnvironment, IConfiguration configuration = null)
+    public StmReports(IWebHostEnvironment webHostEnvironment, IConfiguration configuration)
     {
         _webHostEnvironment = webHostEnvironment;
         _configuration = configuration;
